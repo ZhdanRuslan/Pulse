@@ -42,7 +42,7 @@ public class Main {
             } catch (OutOfBoundsException e) {
                 System.out.println("Value in param1 and param 2 must be between [-1000 1000] ");
             }
-            scanner.close();
         }
+        scanner.close();
     }
 }

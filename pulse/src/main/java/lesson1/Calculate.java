@@ -27,16 +27,16 @@ public class Calculate {
 
         switch (operation) {
             case "+":
-                System.out.println(param1 + param2);
+                System.out.print(param1 + param2);
                 break;
             case "-":
-                System.out.println(param1 - param2);
+                System.out.print(param1 - param2);
                 break;
             case "*":
-                System.out.println(param1 * param2);
+                System.out.print(param1 * param2);
                 break;
             case "/":
-                System.out.println(param1 / param2);
+                System.out.print(param1 / param2);
                 break;
             default:
                 System.out.println("Wrong input!");
