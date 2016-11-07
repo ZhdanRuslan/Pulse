@@ -1,7 +1,7 @@
 package lesson1;
 
-import lesson1.exc.OutOfBoundsException;
 import lesson1.exc.WrongOperationException;
+import lesson1.exc.OutOfBoundsException;
 
 /**
 * Class in which launch an arithmetic operation

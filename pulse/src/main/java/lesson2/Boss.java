@@ -1,7 +1,5 @@
 package lesson2;
 
-import lesson2.interfaces.Signable;
-
 /**
  * Created by admin on 06.11.2016.
  */
