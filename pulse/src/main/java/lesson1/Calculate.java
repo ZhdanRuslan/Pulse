@@ -36,6 +36,8 @@ public class Calculate {
                 System.out.print(param1 * param2);
                 break;
             case "/":
+                if (param2 == 0)
+                    throw new ArithmeticException();
                 System.out.print(param1 / param2);
                 break;
             default:
