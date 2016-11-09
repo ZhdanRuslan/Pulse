@@ -12,6 +12,9 @@ public class Main {
             result = worker.createDetail(etalon);
         } catch (CloneNotSupportedException e) {
             System.out.println("Not cloneable");
+        } catch (BadDetailException e) {
+            System.out.println("Bad detail.");
+            return;
         }
 
         System.out.println(etalon);
