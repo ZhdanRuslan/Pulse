@@ -1,6 +1,6 @@
-package lesson3;
+package lesson3.task1;
 
-import lesson3.ability.Creatable;
+import lesson3.task1.ability.Creatable;
 
 import java.util.Random;
 
