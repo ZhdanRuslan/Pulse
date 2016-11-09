@@ -41,4 +41,13 @@ public class Detail implements Cloneable{
     protected Detail clone() throws CloneNotSupportedException {
         return  (Detail) super.clone();
     }
+
+    @Override
+    public String toString() {
+        return "Detail{" +
+                "cost=" + cost +
+                ", name='" + name + '\'' +
+                ", hashCode=" + this.hashCode() +
+                '}';
+    }
 }
