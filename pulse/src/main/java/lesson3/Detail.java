@@ -47,6 +47,7 @@ public class Detail implements Cloneable{
         return "Detail{" +
                 "cost=" + cost +
                 ", name='" + name + '\'' +
+                ", manufacturer='" + manufacturer + '\'' +
                 ", hashCode=" + this.hashCode() +
                 '}';
     }

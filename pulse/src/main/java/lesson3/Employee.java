@@ -9,6 +9,12 @@ import java.util.Random;
  */
 public abstract class Employee implements Creatable{
 
+    private String name;
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
     static Random random = new Random();
 
     @Override
@@ -18,6 +24,12 @@ public abstract class Employee implements Creatable{
         if (probability>94)
             throw new BadDetailException();
         Detail result = etalon.clone();
+        result.setManufacturer(this);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }
