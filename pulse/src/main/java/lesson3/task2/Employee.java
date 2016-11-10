@@ -3,7 +3,7 @@ package lesson3.task2;
 /**
  * Created by admin on 10.11.2016.
  */
-public abstract class Employee implements Teachable {
+public abstract class Employee implements Cloneable {
 
     private CommonSkills commonSkills;
     private PhysicSkills physicSkills;
@@ -31,16 +31,10 @@ public abstract class Employee implements Teachable {
         }
 
         @Override
-        protected CommonSkills clone() throws CloneNotSupportedException {
-            CommonSkills commonSkills = (CommonSkills) super.clone();
-            return commonSkills;
-        }
-
-        @Override
         public String toString() {
             return "CommonSkills{" +
-                    "levelOfSkills=" + levelOfSkills +
-                    "hashCode=" + Employee.this.hashCode() +
+                    " levelOfSkills=" + levelOfSkills +
+                    " hashCode=" + hashCode() +
                     '}';
         }
     }
@@ -49,53 +43,29 @@ public abstract class Employee implements Teachable {
 
         private double levelOfSkills;
 
-        private PhysicSkills() {
+        public PhysicSkills() {
             this.levelOfSkills = 0.00;
         }
 
-        private PhysicSkills(double levelOfSkills) {
+        public PhysicSkills(double levelOfSkills) {
             this.levelOfSkills = levelOfSkills;
-        }
-
-        @Override
-        protected PhysicSkills clone() throws CloneNotSupportedException {
-            PhysicSkills physicSkills = (PhysicSkills) super.clone();
-            return physicSkills;
         }
 
         @Override
         public String toString() {
             return "PhysicSkills{" +
-                    "levelOfSkills=" + levelOfSkills +
-                    "hashCode=" + Employee.this.hashCode() +
+                    " levelOfSkills=" + levelOfSkills +
+                    " hashCode=" + hashCode() +
                     '}';
         }
     }
 
-
-    public CommonSkills getCommonSkills() {
-        return commonSkills;
-    }
-
-    public void setCommonSkills(CommonSkills commonSkills) {
-        this.commonSkills = commonSkills;
-    }
-
-    public PhysicSkills getPhysicSkills() {
-        return physicSkills;
-    }
-
-    public void setPhysicSkills(PhysicSkills physicSkills) {
-        this.physicSkills = physicSkills;
-    }
-
     @Override
-    public Employee teachSomeone(Employee target) throws CloneNotSupportedException {
-        CommonSkills commonSkills = this.commonSkills.clone();
-        PhysicSkills physicSkills = this.physicSkills.clone();
-        target.setCommonSkills(commonSkills);
-        target.setPhysicSkills(physicSkills);
-        return target;
+    protected Employee clone() throws CloneNotSupportedException {
+        Employee cloned = (Employee) super.clone();
+        cloned.commonSkills = new CommonSkills(commonSkills.levelOfSkills);
+        cloned.physicSkills = new PhysicSkills(physicSkills.levelOfSkills);
+        return cloned;
     }
 
     @Override

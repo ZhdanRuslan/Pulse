@@ -10,8 +10,8 @@ public class Master extends Employee implements Teachable {
     }
 
     @Override
-    public Employee teachSomeone(Employee target) {
-        return null;
+    public Employee teachSomeone(Employee target) throws CloneNotSupportedException {
+        target = (Employee) super.clone();
+        return target;
     }
-
 }
