@@ -14,13 +14,13 @@ public class TestApp2 {
         Master master = new Master(98.00, 75.00);
         Trainee trainee = new Trainee();
 
-        try {
-            master.teachSomeone(trainee);
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+        Employee result = null;
 
-        Assert.assertNotSame(master, trainee);
-//        Assert.assertEquals(master.);
+        try {
+            result = (Employee) master.teachSomeone(trainee);
+        } catch (CloneNotSupportedException e) {
+            System.out.println("Not cloneable...");
+        }
+        Assert.assertNotSame(trainee, master);
     }
 }

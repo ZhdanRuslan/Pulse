@@ -37,6 +37,10 @@ public abstract class Employee implements Cloneable {
                     " hashCode=" + hashCode() +
                     '}';
         }
+
+        public double getLevelOfSkills() {
+            return levelOfSkills;
+        }
     }
 
     private class PhysicSkills implements Cloneable{
@@ -57,6 +61,10 @@ public abstract class Employee implements Cloneable {
                     " levelOfSkills=" + levelOfSkills +
                     " hashCode=" + hashCode() +
                     '}';
+        }
+
+        public double getLevelOfSkills() {
+            return levelOfSkills;
         }
     }
 
