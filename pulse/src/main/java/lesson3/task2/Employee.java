@@ -76,4 +76,20 @@ public abstract class Employee implements Cloneable {
                 ", hashCode=" + hashCode() +
                 '}';
     }
+
+    public CommonSkills getCommonSkills() {
+        return commonSkills;
+    }
+
+    public void setCommonSkills(CommonSkills commonSkills) {
+        this.commonSkills = commonSkills;
+    }
+
+    public PhysicSkills getPhysicSkills() {
+        return physicSkills;
+    }
+
+    public void setPhysicSkills(PhysicSkills physicSkills) {
+        this.physicSkills = physicSkills;
+    }
 }
