@@ -8,11 +8,4 @@ import java.util.List;
  */
 public class Unit {
 
-    private List<Detail> details = new ArrayList<>();
-
-    public Unit addDetail(Detail... detail) {
-        for (int i = 0; i < detail.length; i++)
-            details.add(i, detail[i]);
-        return this;
-    }
 }

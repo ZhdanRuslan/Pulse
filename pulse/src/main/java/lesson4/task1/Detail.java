@@ -5,9 +5,4 @@ package lesson4.task1;
  */
 public class Detail {
 
-    private String name;
-
-    public Detail(String name) {
-        this.name = name;
-    }
 }
