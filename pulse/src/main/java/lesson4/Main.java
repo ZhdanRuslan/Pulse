@@ -1,7 +1,4 @@
-package lesson4.task1;
-
-import java.util.ArrayList;
-import java.util.List;
+package lesson4;
 
 public class Main {
 
