@@ -1,9 +1,9 @@
 package lesson4.task1;
 
-/**
- * Created by admin on 16.11.2016.
- */
 public class Employee {
 
-
+    Unit addDetail(Unit unit, Detail... det) {
+        unit.pushDetail(det);
+        return unit;
+    }
 }
