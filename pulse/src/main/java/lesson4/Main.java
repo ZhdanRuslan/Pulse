@@ -1,9 +1,12 @@
 package lesson4;
 
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        List
         Detail detail = new Detail("detail");
         Detail detail1 = new Detail("detail1");
         Detail detail2 = new Detail("detail2");
